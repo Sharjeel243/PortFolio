@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
+    <!-- <link rel="stylesheet" href="./styles/all.min.css"> -->
+</head>
+
+<body>
+    <div class="main" id="particles-js">
+        <nav>
+            <div class="logo">
+                <h4>Sharjeel Abbas</h4>
+            </div>
+            <ul class="navUl">
+                <li class="navItems"><a href="#"> Home</a></li>
+
+                <li class="navItems"><a class="aboutMeNav" href="#aboutMe"> About</a></li>
+                <li class="contactNav" class="navItems"><a href="#contact"> Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="title">
+            <h1 id="myName">Sharjeel Abbas</h1>
+            <h2 id="myTag">Web-Developer & Designer </h2>
+        </div>
+
+        <img class="mainMe" src="imgs/mainMe.png" alt="Me">
+        <a href="#contact" class="CTA">Contact Me</a>
+        <img data-sal="slide-up" data-sal-duration="1200" class="backImgs" id="cpp" src="imgs/c++.png" alt="c++">
+        <img data-sal="slide-up" data-sal-duration="1200" class="backImgs" id="photoshop" src="imgs/photoshop.png"
+            alt="PS">
+        <img data-sal="slide-up" data-sal-duration="1200" class="backImgs" id="js" src="imgs/js.png" alt="js">
+        <img data-sal="slide-up" data-sal-duration="1200" class="backImgs" id="css" src="imgs/css.png" alt="css">
+
+    </div>
+    <div id="aboutMe" class="aboutMe">
+        <h2 data-sal="slide-up" data-sal-duration="1200" id="abme">About Me</h2>
+        <br>
+        <div class="acon">
+            <img data-sal="slide-up" data-sal-duration="1200" id="cppai" src="imgs/c++.png" alt="cpp">
+            <div data-sal="slide-up" data-sal-duration="1200" class="aboutex">
+                <h2>C++</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, assumenda accusamus, nulla
+                    perferendis quae magni deserunt neque eius veritatis reprehenderit labore ducimus amet provident
+                    repellendus tenetur ratione? Maiores, itaque harum.</p>
+            </div>
+        </div>
+        <div class="acon torev">
+            <img data-sal="slide-up" data-sal-duration="1200" id="cssai" src="imgs/css.png" alt="css">
+
+            <div data-sal="slide-up" data-sal-duration="1200" class="aboutex">
+                <h2>CSS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, assumenda accusamus, nulla
+                    perferendis quae magni deserunt neque eius veritatis reprehenderit labore ducimus amet provident
+                    repellendus tenetur ratione? Maiores, itaque harum.</p>
+            </div>
+        </div>
+        <div class="acon">
+
+
+            <img data-sal="slide-up" data-sal-duration="1200" id="psai" src="imgs/photoshop.png" alt="ps">
+            <div data-sal="slide-up" data-sal-duration="1200" class="aboutex">
+                <h2>PhotoShop</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, assumenda accusamus, nulla
+                    perferendis quae magni deserunt neque eius veritatis reprehenderit labore ducimus amet provident
+                    repellendus tenetur ratione? Maiores, itaque harum.</p>
+            </div>
+        </div>
+        <div class="acon torev">
+            <img data-sal="slide-up" data-sal-duration="1200" id="jsai" src="imgs/js.png" alt="js">
+            <div data-sal="slide-up" data-sal-duration="1200" class="aboutex">
+                <h2>JavaScript</h2>
+                <p id="jsexp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, assumenda
+                    accusamus, nulla
+                    perferendis quae magni deserunt neque eius veritatis reprehenderit labore ducimus amet provident
+                    repellendus tenetur ratione? Maiores, itaque harum.</p>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="form" data-sal="slide-up" data-sal-duration="1200">
+            <div class="tocenter">
+                <input class="input1st" type="text" placeholder="NAME">
+                <input type="email" placeholder="EMAIL">
+                <input type="text" placeholder="SUBJECT">
+                <input type="text" placeholder="MESSAGE">
+                <a href="#" class="CTA2">Contact Me</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <footer>
+        <h2> <i class="far fa-envelope icon"></i>
+            SharjeelAbbas014@gmail.com</h2>
+        <p>ALL RIGHTS RESERVED - 2019</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="./node_modules/sal.js/dist/sal.js"></script>
+    <script src="all.min.js"></script>
+    <script type="module">
+        import jump from './node_modules/jump.js/dist/jump.module.js';
+        sal({
+            threshold: .1,
+            once: false
+        });
+        function jumpto(name,nameTo){
+            const CTA = document.querySelector(name);
+            CTA.addEventListener('click', function(){
+            jump(nameTo,{duration:2000});
+           });
+        }
+
+        jumpto('.CTA','.contact');
+        jumpto('.contactNav','.contact');
+        jumpto('.aboutMeNav','#cppai');
+    </script>
+
+
+</body>
+
+</html>
